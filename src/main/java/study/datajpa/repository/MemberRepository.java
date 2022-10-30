@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom {
+public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom, JpaSpecificationExecutor<Member> {
 
     List<Member> findByUsernameAndAgeGreaterThan(String username, int age);
 
